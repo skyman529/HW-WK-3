@@ -5,7 +5,7 @@ document.querySelector("#generate").addEventListener("click", writePassword);
 
 //  Arrays of characters 
 var numerals = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+var specChar = ["~", "?", "&", "|", "*", "-", "+", "=", "/", "<", ">", "%","!"];
 var superspecialChar = ["$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$", "$","$"];
 var letterLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var letterUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -35,29 +35,30 @@ function generatePassword() {
       alert(`You've chosen ${confirmLength} characters!`);
 
     // password options verification 
-    var confirmLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
-    var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters"); 
-    var confirmSpecCharacter = confirm("Click OK to confirm if you would like to include special characters");
-    var confirmSuperSpecialCharacter = confirm("Click OK to confirm if you would like to include Super special characters");
-    var confirmNumericCharacter = confirm("Click OK to confirm if you would like to include numeric characters");    
+    var confirmLowerCase = confirm("Click OK button if you would like to include lowercase letters");
+    var confirmUpperCase = confirm("Click OK button if you would like to include uppercase letters"); 
+    var confirmSpecCharacter = confirm("Click OK button if you would like to include special characters");
+    var confirmSuperSpecialCharacter = confirm("Click OK button if you would like to include Super special characters");
+    var confirmNumericCharacter = confirm("Click OK button if you would like to include numeric characters");    
       // Loop if  has no options selected
      
       while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecCharacter === false && confirmSuperSpecialCharacter === false && confirmNumericCharacter === false) {
         alert("You must choose at least one parameter");
-        var confirmLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
-        var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters"); 
-        var confirmSpecCharacter = confirm("Click OK to confirm if you would like to include special characters");
-        var confirmSuperSpecialCharacter = confirm("Click OK to confirm if you would like to include Super special characters");
-        var confirmNumericCharacter = confirm("Click OK to confirm if you would like to include numeric characters");    
+        var confirmLowerCase = confirm("Click OK button if you would like to include lowercase letters");
+        var confirmUpperCase = confirm("Click OK  button if you would like to include uppercase letters"); 
+        var confirmSpecCharacter = confirm("Click OK button if you would like to include special characters");
+        var confirmSuperSpecialCharacter = confirm("Click OK button if you would like to include Super special characters");
+        var confirmNumericCharacter = confirm("Click OK button if you would like to include numeric characters");    
     } 
     // Loop if only superSpecialchar is selected
     while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecCharacter === false && confirmSuperSpecialCharacter === true && confirmNumericCharacter === false) {
       alert("That is very cash money of you but, you should choose at least one more parameter");
-      var confirmSpecCharacter = confirm("Click OK to confirm if you would like to include special characters");
-      var confirmSuperSpecialCharacter = confirm("Click OK to confirm if you would like to include Super special characters");
-      var confirmNumericCharacter = confirm("Click OK to confirm if you would like to include numeric characters");    
-      var confirmLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
-      var confirmUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");   
+      var confirmLowerCase = confirm("Click OK button if you would like to include lowercase letters");
+      var confirmUpperCase = confirm("Click OK button if you would like to include uppercase letters");
+      var confirmSpecCharacter = confirm("Click OK button if you would like to include special characters");
+      var confirmSuperSpecialCharacter = confirm("Click OK button if you would like to include Super special characters");
+      var confirmNumericCharacter = confirm("Click OK button if you would like to include numeric characters");    
+   
   } 
 
 
