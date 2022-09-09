@@ -23,7 +23,7 @@ var confirmNumericCharacter;
  alert(`You're using a password generator created by a fourth week DU coding bootcamp student. apply passwords at your own risk`);
 // prompt for password length
 function generatePassword() {
-var confirmLength = (prompt("How many characters would you like your password to contain? any 8 to 128. I would use as many charecters as you're allowed."));
+var confirmLength = (prompt("How many characters would you like your password to contain? any 8 to 128. I would use as many characters as you're allowed."));
 // Loop if answer is to small or large
   while(confirmLength <= 7 || confirmLength >= 129) {
       alert("Password length must be between 8-128 characters please try again");
