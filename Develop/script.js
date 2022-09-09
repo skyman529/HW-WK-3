@@ -19,29 +19,26 @@ var confirmSuperSpecialCharacter;
 var confirmNumericCharacter;
 
 
- // verify user is crazy 
+// verify user is crazy 
  alert(`You're using a password generator created by a fourth week DU coding bootcamp student. apply passwords at your own risk`);
 // prompt for password length
 function generatePassword() {
-  var confirmLength = (prompt("How many characters would you like your password to contain? any 8 to 128. I would use as many charecters as you're allowed."));
-
-  // Loop if answer is to small or large
-
+var confirmLength = (prompt("How many characters would you like your password to contain? any 8 to 128. I would use as many charecters as you're allowed."));
+// Loop if answer is to small or large
   while(confirmLength <= 7 || confirmLength >= 129) {
       alert("Password length must be between 8-128 characters please try again");
       var confirmLength = (prompt("You may have chosen to few or too many! how bout 23 or 49. Just any number between 8 and 128."));
       } 
-
-      // verify legth 
+// verify legth 
       alert(`You've chosen ${confirmLength} characters!`);
 
-    // password options verification 
+// password options verification 
     var confirmLowerCase = confirm("Click OK button if you would like to include lowercase letters");
     var confirmUpperCase = confirm("Click OK button if you would like to include uppercase letters"); 
     var confirmSpecCharacter = confirm("Click OK button if you would like to include special characters");
     var confirmSuperSpecialCharacter = confirm("Click OK button if you would like to include Super special characters");
     var confirmNumericCharacter = confirm("Click OK button if you would like to include numeric characters");    
-      // Loop if  has no options selected
+// Loop if  has no options selected
      
       while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecCharacter === false && confirmSuperSpecialCharacter === false && confirmNumericCharacter === false) {
         alert("You must choose at least one parameter");
@@ -51,7 +48,7 @@ function generatePassword() {
         var confirmSuperSpecialCharacter = confirm("Click OK button if you would like to include Super special characters");
         var confirmNumericCharacter = confirm("Click OK button if you would like to include numeric characters");    
     } 
-    // Loop if only superSpecialchar is selected
+// Loop if only superSpecialchar is selected
     while(confirmUpperCase === false && confirmLowerCase === false && confirmSpecCharacter === false && confirmSuperSpecialCharacter === true && confirmNumericCharacter === false) {
       alert("That is very cash money of you but, you should choose at least one more parameter");
       var confirmLowerCase = confirm("Click OK button if you would like to include lowercase letters");
@@ -62,8 +59,7 @@ function generatePassword() {
    
   } 
 
-
-      // Assign an action to the password parameters
+// Assign an action to the password parameters
       var passwordCharacters = []
       
     if (confirmSpecCharacter) {
@@ -88,7 +84,7 @@ function generatePassword() {
 
       console.log(passwordCharacters)
 
-      // for loop selecting random characters from the array
+// for loop selecting random characters from the array
       var randomPassword = ""
       
       for (var i = 0; i < confirmLength; i++) {
@@ -97,7 +93,6 @@ function generatePassword() {
       }
       return randomPassword;
 }
-
 // show password in #password input
 function writePassword() {
   var password = generatePassword();
